@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naklon Third-Party Components</title>
+<link rel="icon" type="image/png" href="../img/icon-64.png">
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#1d1d1f; --muted:#6e6e73; --line:#d2d2d7;
+        --link:#0066cc; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#000; --fg:#f5f5f7; --muted:#a1a1a6; --line:#424245; --link:#2997ff; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font: 17px/1.53 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+       -webkit-font-smoothing: antialiased; }
+main { max-width: 692px; margin: 0 auto; padding: 72px 16px 96px; }
+h1 { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 8px; }
+h2 { font-size: 24px; line-height: 1.17; letter-spacing: -0.01em; font-weight: 600; margin: 48px 0 12px; }
+p, li { color: var(--fg); }
+.meta { color: var(--muted); margin: 0 0 32px; }
+em { color: var(--muted); font-style: normal; }
+ul { padding-left: 1.2em; } li { margin: 6px 0; }
+code { font: 15px ui-monospace, "SF Mono", Menlo, monospace; background: color-mix(in srgb, var(--fg) 7%, transparent);
+       padding: 2px 6px; border-radius: 6px; word-break: break-all; }
+a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+.back { display:inline-block; margin-bottom: 40px; font-size: 15px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 0; }
+</style>
+</head>
+<body><main>
+<a class="back" href="./">← Naklon</a>
+<h1>Naklon Third-Party Components</h1>
+<p class="meta">Version 1.0 of September 28, 2026.</p>
+<h2>Mac Duo</h2>
+<p>Naklon's effect engine is based on Mac Duo: reading the lid angle sensor, the rule for starting and ending the effect, the perspective computation, the blur and dimming shader, Metal rendering and ScreenCaptureKit screen capture.</p>
+<ul><li>Author: Makito, <a href="https://github.com/sumimakito/Mac-Duo">https://github.com/sumimakito/Mac-Duo</a></li><li>Copyright 2026 Makito</li><li>License: Apache License 2.0; the text is in <code>Apache-2.0.txt</code> inside the app (Contents/Resources) and at <a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></li></ul>
+<p>The original NOTICE:</p>
+<p><em>Mac Duo. Copyright 2026 Makito. Originally developed by Makito.</em></p>
+<h2>What was changed</h2>
+<p>The engine files were carried over with changes, and each is marked in its header. Comments were translated into Russian; the geometry, the effect rule and the spring were moved into a separate module and covered by tests; window state moved to Observation; the interface, menu bar, settings, localization, packaging and documents were written anew.</p>
+</main></body>
+</html>

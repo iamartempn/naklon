@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности «Наклон»</title>
+<link rel="icon" type="image/png" href="img/icon-64.png">
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#1d1d1f; --muted:#6e6e73; --line:#d2d2d7;
+        --link:#0066cc; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#000; --fg:#f5f5f7; --muted:#a1a1a6; --line:#424245; --link:#2997ff; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font: 17px/1.53 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+       -webkit-font-smoothing: antialiased; }
+main { max-width: 692px; margin: 0 auto; padding: 72px 16px 96px; }
+h1 { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 8px; }
+h2 { font-size: 24px; line-height: 1.17; letter-spacing: -0.01em; font-weight: 600; margin: 48px 0 12px; }
+p, li { color: var(--fg); }
+.meta { color: var(--muted); margin: 0 0 32px; }
+em { color: var(--muted); font-style: normal; }
+ul { padding-left: 1.2em; } li { margin: 6px 0; }
+code { font: 15px ui-monospace, "SF Mono", Menlo, monospace; background: color-mix(in srgb, var(--fg) 7%, transparent);
+       padding: 2px 6px; border-radius: 6px; word-break: break-all; }
+a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+.back { display:inline-block; margin-bottom: 40px; font-size: 15px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 0; }
+</style>
+</head>
+<body><main>
+<a class="back" href="./">← Наклон</a>
+<h1>Политика конфиденциальности «Наклон»</h1>
+<p class="meta">Редакция 1.0 от 28 сентября 2026 года.</p>
+<h2>Коротко</h2>
+<p>«Наклон» не собирает о вас никаких данных. Изображение экрана, нужное для эффекта, не покидает видеопамять вашего Mac: оно не записывается на диск и никуда не отправляется. У приложения нет серверов, учетных записей, аналитики, рекламы и счетчиков.</p>
+<h2>Запись экрана</h2>
+<ul><li><strong>Зачем.</strong> Картинка, которая отклоняется и гаснет, когда вы закрываете крышку, — это изображение вашего экрана. Поэтому «Наклону» нужен доступ к записи экрана, который вы даете в Системных настройках.</li><li><strong>Когда.</strong> Экран захватывается, только пока крышка закрывается, и еще две секунды после ее остановки, а также во время показа эффекта по кнопке. В остальное время захвата нет.</li><li><strong>Куда.</strong> Кадры попадают только в видеопамять и перерисовываются с эффектом прямо на экране. Они не сохраняются в файлы, не копируются в буфер обмена и не передаются по сети. Когда эффект заканчивается, кадры освобождаются.</li><li><strong>Отозвать доступ</strong> можно в любой момент: Системные настройки → Конфиденциальность и безопасность → Запись экрана.</li></ul>
+<h2>Что хранится на вашем компьютере</h2>
+<ul><li><strong>Настройки</strong> — угол начала, размытие, затемнение, перспектива и другие параметры эффекта. Они лежат в настройках приложения <code>~/Library/Preferences/com.pogosian.naklon.plist</code>.</li><li><strong>Журнал</strong> — служебные сообщения о начале и конце эффекта с углом крышки попадают в системный журнал macOS, как у любой программы. Изображения экрана в них нет.</li></ul>
+<h2>Когда приложение выходит в интернет</h2>
+<ul><li><strong>Проверка обновлений.</strong> Раз в сутки, если это не выключено в настройках, приложение запрашивает с сайта «Наклона» (iamartempn.github.io, GitHub Pages) номер последней версии. В запросе есть только номер установленной версии; GitHub, как и любой сайт, видит при этом IP-адрес. Без интернета проверка просто не выполняется.</li></ul>
+<p>Других обращений к сети нет. Для работы интернет не нужен.</p>
+<h2>Персональные данные</h2>
+<p>Разработчик не получает, не хранит и не обрабатывает ваши персональные данные.</p>
+<h2>Изменения и вопросы</h2>
+<p>Если политика изменится, новая редакция появится на сайте приложения до выхода версии, к которой она относится.</p>
+<p>Связь и поддержка — в Telegram: <a href="https://t.me/iamartempn">https://t.me/iamartempn</a> (@iamartempn). Переписка идет через Telegram и по его правилам; приложение к ней отношения не имеет и ничего из нее не получает.</p>
+</main></body>
+</html>

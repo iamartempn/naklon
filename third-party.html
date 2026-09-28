@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сторонние компоненты «Наклон»</title>
+<link rel="icon" type="image/png" href="img/icon-64.png">
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#1d1d1f; --muted:#6e6e73; --line:#d2d2d7;
+        --link:#0066cc; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#000; --fg:#f5f5f7; --muted:#a1a1a6; --line:#424245; --link:#2997ff; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font: 17px/1.53 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+       -webkit-font-smoothing: antialiased; }
+main { max-width: 692px; margin: 0 auto; padding: 72px 16px 96px; }
+h1 { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 8px; }
+h2 { font-size: 24px; line-height: 1.17; letter-spacing: -0.01em; font-weight: 600; margin: 48px 0 12px; }
+p, li { color: var(--fg); }
+.meta { color: var(--muted); margin: 0 0 32px; }
+em { color: var(--muted); font-style: normal; }
+ul { padding-left: 1.2em; } li { margin: 6px 0; }
+code { font: 15px ui-monospace, "SF Mono", Menlo, monospace; background: color-mix(in srgb, var(--fg) 7%, transparent);
+       padding: 2px 6px; border-radius: 6px; word-break: break-all; }
+a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+.back { display:inline-block; margin-bottom: 40px; font-size: 15px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 0; }
+</style>
+</head>
+<body><main>
+<a class="back" href="./">← Наклон</a>
+<h1>Сторонние компоненты «Наклон»</h1>
+<p class="meta">Редакция 1.0 от 28 сентября 2026 года.</p>
+<h2>Mac Duo</h2>
+<p>Движок эффекта «Наклона» основан на программе Mac Duo: чтение датчика угла крышки, правило включения и снятия эффекта, расчет перспективы, шейдер размытия и затемнения, отрисовка через Metal и захват экрана через ScreenCaptureKit.</p>
+<ul><li>Автор: Makito, <a href="https://github.com/sumimakito/Mac-Duo">https://github.com/sumimakito/Mac-Duo</a></li><li>Copyright 2026 Makito</li><li>Лицензия: Apache License 2.0, текст — в файле <code>Apache-2.0.txt</code> внутри программы (Contents/Resources) и по адресу <a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></li></ul>
+<p>Уведомление NOTICE исходной программы:</p>
+<p><em>Mac Duo. Copyright 2026 Makito. Originally developed by Makito.</em></p>
+<h2>Что изменено</h2>
+<p>Файлы движка перенесены с изменениями, каждый помечен в заголовке. Комментарии переведены на русский; геометрия, правило эффекта и пружина вынесены в отдельный модуль и покрыты тестами; состояние для окна переведено на Observation; интерфейс, строка меню, настройки, локализация, упаковка и документы написаны заново.</p>
+</main></body>
+</html>

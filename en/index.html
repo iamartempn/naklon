@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../img/icon-64.png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=f75392ae5f">
+<link rel="stylesheet" href="../style.css?v=8bf0d24ddd">
 </head>
 <body>
 <nav class="nav"><div class="wide">
@@ -42,6 +42,18 @@
   </div>
   <picture><source media="(prefers-color-scheme: dark)" srcset="../img/overview-en-dark-1280.webp?v=51ab40ac0a 1280w, ../img/overview-en-dark-2x.webp?v=a571cee043 1720w" sizes="(max-width: 1000px) 100vw, 960px"><img class="shot" src="../img/overview-en-1280.webp?v=4e10396a6b" srcset="../img/overview-en-1280.webp?v=4e10396a6b 1280w, ../img/overview-en-2x.webp?v=056ac94f14 1720w" sizes="(max-width: 1000px) 100vw, 960px" width="1720" height="1048" alt="The Naklon window: a lid diagram with the current angle and the effect zone" fetchpriority="high"></picture>
 </header>
+
+<section class="demo-section" id="demo">
+  <div class="wrap center">
+    <p class="eyebrow">See it</p>
+    <h2>The lid goes down. The screen sinks in.</h2>
+    <p class="section-lead">Recorded on a real MacBook. Here the effect is played with Show Effect; with the lid it follows the exact angle — close a little, it leans a little.</p>
+  </div>
+  <video class="demo" autoplay muted loop playsinline preload="metadata" width="1600" height="1040"
+         poster="../img/demo-poster.jpg?v=c85a22b807" aria-label="A MacBook screen leans back, blurs and fades, then comes back">
+    <source src="../img/demo.mp4?v=f8fe6373b2" type="video/mp4">
+  </video>
+</section>
 
 <section id="features">
   <div class="wrap center">
@@ -121,6 +133,11 @@ document.documentElement.classList.remove("no-js");
 document.querySelectorAll("[data-lang]").forEach(function (a) {
   a.addEventListener("click", function () { try { localStorage.setItem("naklon-lang", a.dataset.lang); } catch (e) {} });
 });
+// «Уменьшить движение»: ролик не крутится сам, запускается кнопкой.
+var demo = document.querySelector("video.demo");
+if (demo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  demo.removeAttribute("autoplay"); demo.pause(); demo.controls = true;
+}
 if ("IntersectionObserver" in window) {
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } });

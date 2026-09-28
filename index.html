@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="img/icon-64.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=f75392ae5f">
+<link rel="stylesheet" href="style.css?v=8bf0d24ddd">
 </head>
 <body>
 <nav class="nav"><div class="wide">
@@ -42,6 +42,18 @@
   </div>
   <picture><source media="(prefers-color-scheme: dark)" srcset="img/overview-ru-dark-1280.webp?v=a68e6b2c37 1280w, img/overview-ru-dark-2x.webp?v=27f5db59b7 1720w" sizes="(max-width: 1000px) 100vw, 960px"><img class="shot" src="img/overview-ru-1280.webp?v=c4a622347b" srcset="img/overview-ru-1280.webp?v=c4a622347b 1280w, img/overview-ru-2x.webp?v=cc72cac741 1720w" sizes="(max-width: 1000px) 100vw, 960px" width="1720" height="1048" alt="Окно Наклона: схема крышки с текущим углом и зоной эффекта" fetchpriority="high"></picture>
 </header>
+
+<section class="demo-section" id="demo">
+  <div class="wrap center">
+    <p class="eyebrow">Как это выглядит</p>
+    <h2>Крышка идет вниз — экран уходит вглубь.</h2>
+    <p class="section-lead">Запись с настоящего MacBook. Здесь эффект проигран кнопкой «Показать эффект», а с крышкой он идет точно за ее углом: чуть прикрыли — чуть отклонился.</p>
+  </div>
+  <video class="demo" autoplay muted loop playsinline preload="metadata" width="1600" height="1040"
+         poster="img/demo-poster.jpg?v=c85a22b807" aria-label="Экран MacBook отклоняется назад, размывается и гаснет, затем возвращается">
+    <source src="img/demo.mp4?v=f8fe6373b2" type="video/mp4">
+  </video>
+</section>
 
 <section id="features">
   <div class="wrap center">
@@ -121,6 +133,11 @@ document.documentElement.classList.remove("no-js");
 document.querySelectorAll("[data-lang]").forEach(function (a) {
   a.addEventListener("click", function () { try { localStorage.setItem("naklon-lang", a.dataset.lang); } catch (e) {} });
 });
+// «Уменьшить движение»: ролик не крутится сам, запускается кнопкой.
+var demo = document.querySelector("video.demo");
+if (demo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  demo.removeAttribute("autoplay"); demo.pause(); demo.controls = true;
+}
 if ("IntersectionObserver" in window) {
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } });

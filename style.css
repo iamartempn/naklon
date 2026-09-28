@@ -266,3 +266,12 @@ footer p { margin: 6px 0; line-height: 1.5; }
 /* «Наклон»: снимок окна в шапке компактнее, чем у «Слова». Окно маленькое, и растянутое
    на 1180 точек оно выглядело пустым; 960 — размер, при котором его читают целиком. */
 .hero .shot { width: min(100%, 960px); }
+
+/* Ролик эффекта: запись всего экрана, скругленная как экран MacBook. */
+section.demo-section { padding-bottom: 40px; }
+video.demo {
+  display: block; width: min(100% - 44px, 960px); height: auto; margin: 48px auto 0;
+  border-radius: 18px; background: #000;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.35), 0 18px 36px -18px rgba(0,0,0,.25);
+}
+@media (max-width: 860px) { video.demo { width: calc(100% - 32px); border-radius: 12px; margin-top: 32px; } }
